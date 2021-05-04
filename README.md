@@ -1,6 +1,11 @@
 # Sub-FedAvg
 Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity
 
+This repository contains the pytorch official implementation for the following paper 
+[Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity]
+
+## Dependencies
+torch v0.3.1, torchvision v0.2.0
 
 ### Options 
 1.General federated options
@@ -36,7 +41,7 @@ parser.add_argument('--label', action='store_true', help='whether non-i.i.d base
 parser.add_argument('--split_test', action='store_true', 
                     help='whether split test set in partitioning or not')
 ```
-1. Structured (Hybrid) pruning options
+1. Structured (Hybrid) pruning options (main_s.py)
 ```
 # pruning arguments 
 parser.add_argument('--pruning_percent_ch', type=float, default=0.45, 
@@ -59,6 +64,19 @@ parser.add_argument('--s', type=float, default=0.0001,
 
 parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
                 metavar='W', help='weight decay (default: 1e-4)')
+```
+1. Unstructured pruning options (main_u.py)
+```
+parser.add_argument('--pruning_percent', type=float, default=10, 
+                        help="Pruning percent for layers (0-100)")
+parser.add_argument('--pruning_target', type=int, default=30, 
+                  help="Total Pruning target percentage (0-100)")
+parser.add_argument('--dist_thresh_fc', type=float, default=0.0001, 
+                  help="threshold for fcs masks difference ")
+parser.add_argument('--acc_thresh', type=int, default=50, 
+                  help="accuracy threshold to apply the derived pruning mask")
+parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
+              metavar='W', help='weight decay (default: 1e-4)')
 ```
 1. Other options
 ```
