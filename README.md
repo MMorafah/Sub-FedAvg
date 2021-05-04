@@ -3,13 +3,10 @@ Personalized Federated Learning by Structured and Unstructured Pruning under Dat
 
 
 ### Options 
-
+1.General federated options
 ```
---rounds: rounds of training
---num_users: number of users (K)
-parser.add_argument('--nclass', type=int, default=2, help="classes or shards per user")
-parser.add_argument('--nsample_pc', type=int, default=250, 
-                    help="number of samples per class or shard for each client")
+parser.add_argument('--rounds', type=int, default=300, help="rounds of training")
+parser.add_argument('--num_users', type=int, default=100, help="number of users: K")
 parser.add_argument('--frac', type=float, default=0.1, help="the fraction of clients: C")
 parser.add_argument('--local_ep', type=int, default=5, help="the number of local epochs: E")
 parser.add_argument('--local_bs', type=int, default=10, help="local batch size: B")
@@ -17,21 +14,30 @@ parser.add_argument('--bs', type=int, default=128, help="test batch size")
 parser.add_argument('--lr', type=float, default=0.01, help="learning rate")
 parser.add_argument('--momentum', type=float, default=0.5, help="SGD momentum (default: 0.5)")
 parser.add_argument('--warmup_epoch', type=int, default=0, help="the number of pretrain local ep")
-
+```
+1. Model options
+```
 # model arguments
 parser.add_argument('--model', type=str, default='lenet5', help='model name')
 parser.add_argument('--ks', type=int, default=5, help='kernel size to use for convolutions')
 parser.add_argument('--in_ch', type=int, default=3, help='input channels of the first conv layer')
-
+```
+1. dataset partitioning options
+```
 # dataset partitioning arguments
 parser.add_argument('--dataset', type=str, default='cifar10', 
                     help="name of dataset: mnist, cifar10, cifar100")
+parser.add_argument('--nclass', type=int, default=2, help="classes or shards per user")
+parser.add_argument('--nsample_pc', type=int, default=250, 
+                    help="number of samples per class or shard for each client")
 parser.add_argument('--noniid', action='store_true', help='whether i.i.d or not')
 parser.add_argument('--shard', action='store_true', help='whether non-i.i.d based on shard or not')
 parser.add_argument('--label', action='store_true', help='whether non-i.i.d based on label or not')
 parser.add_argument('--split_test', action='store_true', 
                     help='whether split test set in partitioning or not')
-
+```
+1. Structured (Hybrid) pruning options
+```
 # pruning arguments 
 parser.add_argument('--pruning_percent_ch', type=float, default=0.45, 
                     help="Pruning percent for channels (0-1)")
@@ -53,6 +59,9 @@ parser.add_argument('--s', type=float, default=0.0001,
 
 parser.add_argument('--weight-decay', '--wd', default=1e-4, type=float,
                 metavar='W', help='weight decay (default: 1e-4)')
+```
+1. Other options
+```
 # other arguments 
 parser.add_argument('--gpu', type=int, default=0, help="GPU ID, -1 for CPU")
 parser.add_argument('--is_print', action='store_true', help='verbose print')
