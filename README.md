@@ -2,8 +2,21 @@
 Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity
 
 This repository contains the pytorch official implementation for the following paper 
-[Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity]
+[Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity] (https://arxiv.org/abs/2105.00562)
 
+
+Citation:
+```
+```
+## Usage 
+* Sub-FedAvg (Hybrid) 
+```
+sh script_s.sh 
+```
+* Sub-FedAvg (Unstructured) 
+```
+sh script_u.sh 
+```
 ## Dependencies
 torch v0.3.1, torchvision v0.2.0
 
@@ -88,3 +101,7 @@ parser.add_argument('--seed', type=int, default=1, help='random seed (default: 1
 parser.add_argument('--load_initial', type=str, default='', help='define initial model path')
 
 ```
+
+## Contact
+Mahdi Morafah (mmorafah@ucsd.edu)
+Saeed Vahidian (svahidia@eng.ucsd.edu)
