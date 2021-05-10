@@ -19,7 +19,7 @@ If you find our repository and paper useful, please cite our work:
 ## Usage 
 1. Glone the repository 
 ```bash
-git clone https://github.com/pliang279/LG-FedAvg.git
+git clone https://github.com/MMorafah/Sub-FedAvg.git
 ```
 1. For Running 
   * Sub-FedAvg (Hybrid) 
