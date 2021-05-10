@@ -2,13 +2,25 @@
 Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity
 
 This repository contains the pytorch official implementation for the following paper 
-[Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity] (https://arxiv.org/abs/2105.00562)
+[**Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity**](https://arxiv.org/abs/2105.00562)<br>
+[Saeed Vahidian*],[Mahdi Morafah*](https://www.linkedin.com/in/mahdi-morafah-ab97a8106/), and [Bill Lin]<br>
+(*equal contribution)
 
+If you find our repository and paper useful, please cite our work: 
+```
+@article{vahidian2021personalized,
+  title={Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity},
+  author={Vahidian, Saeed and Morafah, Mahdi and Lin, Bill},
+  journal={arXiv preprint arXiv:2105.00562},
+  year={2021}
+}
+```
 
-Citation:
-```
-```
 ## Usage 
+1. Glone the repository 
+```bash
+git clone https://github.com/pliang279/LG-FedAvg.git
+```
 * Sub-FedAvg (Hybrid) 
 ```
 sh script_s.sh 
@@ -103,5 +115,5 @@ parser.add_argument('--load_initial', type=str, default='', help='define initial
 ```
 
 ## Contact
-Mahdi Morafah (mmorafah@ucsd.edu)
-Saeed Vahidian (svahidia@eng.ucsd.edu)
+- Mahdi Morafah (mmorafah@ucsd.edu)
+- Saeed Vahidian (svahidia@eng.ucsd.edu)
