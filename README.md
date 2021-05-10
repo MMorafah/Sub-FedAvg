@@ -1,10 +1,10 @@
 # Sub-FedAvg
 Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity
 
-This repository contains the pytorch official implementation for the following paper 
+This repository contains the pytorch official implementation for the following paper<br>
 [**Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity**](https://arxiv.org/abs/2105.00562)<br>
-[Saeed Vahidian*],[Mahdi Morafah*](https://www.linkedin.com/in/mahdi-morafah-ab97a8106/), and [Bill Lin]<br>
-(*equal contribution)
+Saeed Vahidian* ,[Mahdi Morafah*](https://www.linkedin.com/in/mahdi-morafah-ab97a8106/), and Bill Lin <br>
+39th IEEE International Conference on Computer Design (*equal contribution)
 
 If you find our repository and paper useful, please cite our work: 
 ```
@@ -21,14 +21,15 @@ If you find our repository and paper useful, please cite our work:
 ```bash
 git clone https://github.com/pliang279/LG-FedAvg.git
 ```
-* Sub-FedAvg (Hybrid) 
-```
-sh script_s.sh 
-```
-* Sub-FedAvg (Unstructured) 
-```
-sh script_u.sh 
-```
+1. For Running 
+  * Sub-FedAvg (Hybrid) 
+  ```
+  sh script_s.sh 
+  ```
+  * Sub-FedAvg (Unstructured) 
+  ```
+  sh script_u.sh 
+  ```
 ## Dependencies
 torch v0.3.1, torchvision v0.2.0
 
