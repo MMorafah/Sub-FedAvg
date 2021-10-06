@@ -5,6 +5,7 @@ This repository contains the pytorch official implementation for the following p
 [**Personalized Federated Learning by Structured and Unstructured Pruning under Data Heterogeneity**](https://arxiv.org/abs/2105.00562)<br>
 Saeed Vahidian*, [Mahdi Morafah*](https://www.linkedin.com/in/mahdi-morafah-ab97a8106/), and Bill Lin <br>
 41th IEEE International Conference on Distributed Computing Systems (Won ICDCS Conference Award) (*equal contribution)
+[**YouTube Presentation**](https://www.youtube.com/watch?v=ttY7T8W5YQE) <br>
 
 If you find our repository and paper useful, please cite our work: 
 ```
